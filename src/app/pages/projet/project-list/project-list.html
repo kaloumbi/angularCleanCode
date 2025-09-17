@@ -1,0 +1,10 @@
+<p>project-list works!</p>
+
+<ul>
+    @for (proj of projectsList; track $index) {
+        <li> {{proj.id}} </li>
+        <li> {{proj.titre}} </li>
+        <li> {{proj.description}} </li>
+        <li> {{proj.etat}} </li>
+    }
+</ul>
