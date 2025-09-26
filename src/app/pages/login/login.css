@@ -1,0 +1,67 @@
+.parent {
+  background: linear-gradient(135deg, #4e73df, #224abe);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  background: linear-gradient(135deg, #ffffff, #f1f5ff);
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  padding: 30px;
+  animation: slideIn 1s ease;
+}
+
+.login-card h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #224abe;
+  font-weight: bold;
+}
+
+.form-control {
+  border-radius: 10px;
+  padding-left: 40px;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.form-group .fa {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #555;
+}
+
+.btn-login {
+  background: linear-gradient(135deg, #224abe, #4e73df);
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(34, 74, 190, 0.4);
+  transition: 0.3s;
+}
+
+.btn-login:hover {
+  background: linear-gradient(135deg, #1b338f, #375fd1);
+  box-shadow: 0 6px 15px rgba(34, 74, 190, 0.6);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

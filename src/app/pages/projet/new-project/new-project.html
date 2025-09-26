@@ -1,1 +1,61 @@
-<p>new-project works!</p>
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-6 col-md-8">
+      <div class="card shadow-lg border-0 rounded-3">
+        
+        <!-- Header -->
+        <div class="card-header bg-primary text-white d-flex align-items-center">
+          <i class="fas fa-plus-circle me-2"></i>
+          <h5 class="mb-0">Ajouter un Projet</h5>
+        </div>
+
+        <!-- Body -->
+        <div class="card-body">
+          <form [formGroup]="projectForm" >
+            
+            <!-- Champ Titre -->
+            <div class="mb-3">
+              <label for="titre" class="form-label fw-bold">
+                <i class="fa fa-tag me-2 text-primary"></i> Titre
+              </label>
+              <input type="text" id="titre" class="form-control" placeholder="Entrer le titre du projet" formControlName="titre" >
+            </div>
+
+            <!-- Champ Description -->
+            <div class="mb-3">
+              <label for="description" class="form-label fw-bold">
+                <i class="fa fa-align-left me-2 text-primary"></i> Description
+              </label>
+              <textarea id="description" class="form-control" rows="3" placeholder="Décrire brièvement le projet" formControlName="description" ></textarea>
+            </div>
+
+            <!-- Champ État -->
+            <div class="mb-3">
+              <label for="etat" class="form-label fw-bold">
+                <i class="fa fa-tasks me-2 text-primary"></i> État
+              </label>
+              <select id="etat" class="form-select" formControlName="etat" >
+                <option value="" disabled selected  >Choisir l'état</option>
+                <option value="En cours">A_FAIRE</option>
+                <option value="En cours">EN_COURS</option>
+                <option value="Terminé">TERMINE</option>
+                <option value="En attente">SUPPRIME</option>
+              </select>
+            </div>
+
+            <!-- Boutons -->
+            <div class="d-flex justify-content-end">
+              <button type="reset" class="btn btn-outline-secondary me-2" (click)="onCancel()">
+                <i class="fa fa-times"></i> Annuler
+              </button>
+              <button type="submit" class="btn btn-primary" (click)="onSave()" >
+                <i class="fa fa-save"></i> Enregistrer
+              </button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

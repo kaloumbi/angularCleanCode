@@ -1,10 +1,84 @@
-<p>project-list works!</p>
-
-<ul>
-    @for (proj of projectsList; track $index) {
-        <li> {{proj.id}} </li>
-        <li> {{proj.titre}} </li>
-        <li> {{proj.description}} </li>
-        <li> {{proj.etat}} </li>
-    }
-</ul>
+<div class="container my-5">
+    <div class="card shadow-lg">
+        <div
+            class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+            <h5 class="mb-0">
+                <i class="fa fa-folder-open"></i> Projects List
+            </h5>
+            <button class="btn btn-light btn-sm" routerLink="/addProject" >
+                <i class="fa fa-plus"></i> Add Project
+            </button>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover align-middle">
+                    <thead class="table-light">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Status</th>
+                            <th scope="col" class="text-center">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @for (proj of projectsList; track $index) {
+                            <tr>
+                                <td> {{proj.id}} </td>
+                                <td> {{proj.titre}} </td>
+                                <td>{{proj.description}}</td>
+                                <td><span
+                                        class="badge bg-success">{{proj.etat}}</span></td>
+                                <td class="text-center">
+                                    <button
+                                        class="btn btn-outline-primary btn-sm me-1"><i
+                                            class="fa fa-eye"></i></button>
+                                    <button
+                                        class="btn btn-outline-warning btn-sm me-1"><i
+                                            class="fa fa-pencil"></i></button>
+                                    <button class="btn btn-outline-danger btn-sm"><i
+                                            class="fa fa-trash"></i></button>
+                                </td>
+                            </tr>
+                        }
+                        <!--
+                        <tr>
+                            <td>2</td>
+                            <td>Mobile App</td>
+                            <td>Create new Android/iOS app</td>
+                            <td><span
+                                    class="badge bg-secondary">Pending</span></td>
+                            <td class="text-center">
+                                <button
+                                    class="btn btn-outline-primary btn-sm me-1"><i
+                                        class="fa fa-eye"></i></button>
+                                <button
+                                    class="btn btn-outline-warning btn-sm me-1"><i
+                                        class="fa fa-pencil"></i></button>
+                                <button class="btn btn-outline-danger btn-sm"><i
+                                        class="fa fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>CRM System</td>
+                            <td>Develop internal CRM system</td>
+                            <td><span class="badge bg-danger">Closed</span></td>
+                            <td class="text-center">
+                                <button
+                                    class="btn btn-outline-primary btn-sm me-1"><i
+                                        class="fa fa-eye"></i></button>
+                                <button
+                                    class="btn btn-outline-warning btn-sm me-1"><i
+                                        class="fa fa-pencil"></i></button>
+                                <button class="btn btn-outline-danger btn-sm"><i
+                                        class="fa fa-trash"></i></button>
+                            </td>
+                        </tr> 
+                        -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

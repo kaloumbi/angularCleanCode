@@ -10,22 +10,27 @@ import { getPieValue } from '../../helper/common.helper';
   providedIn: 'root',
 })
 export class ProjectService {
+  private PROJECT_URL =
+    environment.API_URL + GlobalConstant.API_END_POINT_CONTROLLER.PROJECT;
+
   constructor(private http: HttpClient) {}
 
   getAllProject(): Observable<IProject[]> {
     return this.http.get<IProject[]>(
-      environment.API_URL +
-        GlobalConstant.API_END_POINT_CONTROLLER +
+      this.PROJECT_URL +
         '/' +
         GlobalConstant.API_END_POINT_METHOD.PROJECT.GET_ALL_PROJECTS
     );
   }
 
-  getValueFromHelper(){
+  getValueFromHelper() {
     const value = getPieValue();
   }
 
-  createNewProject(obj: any) {
-    return this.http.post(environment.API_URL + 'projet/added', obj);
+  saveProject(proj: IProject): Observable<IProject> {
+    return this.http.post<IProject>(
+      this.PROJECT_URL + '/' + GlobalConstant.API_END_POINT_METHOD.PROJECT.CREATE_NEW,
+      proj
+    );
   }
 }

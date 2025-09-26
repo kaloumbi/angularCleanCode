@@ -1,1 +1,81 @@
-<p>tache-list works!</p>
+<div class="container my-5">
+    <div class="card shadow-lg">
+        <div
+            class="card-header bg-success text-white d-flex justify-content-between align-items-center">
+            <h5 class="mb-0">
+                <i class="fa fa-tasks"></i> Tasks List
+            </h5>
+            <button class="btn btn-light btn-sm">
+                <i class="fa fa-plus"></i> Add Task
+            </button>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover align-middle">
+                    <thead class="table-light">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Status</th>
+                            <th scope="col" class="text-center">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Design Mockup</td>
+                            <td>Create UI mockups for new app</td>
+                            <td><span class="badge bg-info">In
+                                    Progress</span></td>
+                            <td class="text-center">
+                                <button
+                                    class="btn btn-outline-primary btn-sm me-1"><i
+                                        class="fa fa-eye"></i></button>
+                                <button
+                                    class="btn btn-outline-warning btn-sm me-1"><i
+                                        class="fa fa-pencil"></i></button>
+                                <button class="btn btn-outline-danger btn-sm"><i
+                                        class="fa fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Testing</td>
+                            <td>Run unit and integration tests</td>
+                            <td><span
+                                    class="badge bg-warning">Pending</span></td>
+                            <td class="text-center">
+                                <button
+                                    class="btn btn-outline-primary btn-sm me-1"><i
+                                        class="fa fa-eye"></i></button>
+                                <button
+                                    class="btn btn-outline-warning btn-sm me-1"><i
+                                        class="fa fa-pencil"></i></button>
+                                <button class="btn btn-outline-danger btn-sm"><i
+                                        class="fa fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Deployment</td>
+                            <td>Deploy project to production</td>
+                            <td><span
+                                    class="badge bg-success">Completed</span></td>
+                            <td class="text-center">
+                                <button
+                                    class="btn btn-outline-primary btn-sm me-1"><i
+                                        class="fa fa-eye"></i></button>
+                                <button
+                                    class="btn btn-outline-warning btn-sm me-1"><i
+                                        class="fa fa-pencil"></i></button>
+                                <button class="btn btn-outline-danger btn-sm"><i
+                                        class="fa fa-trash"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

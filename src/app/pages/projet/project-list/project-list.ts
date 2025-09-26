@@ -1,18 +1,20 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { ProjectService } from '../../../core/service/project/project-service';
 import { IProject } from '../../../core/model/interface/iproject';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-project-list',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './project-list.html',
   styleUrl: './project-list.css',
 })
-export class ProjectList implements OnInit {
+export class ProjectList /* implements OnInit */ {
+
+  projectsList: IProject[] = [];
 
   projectService = inject(ProjectService);
 
-  projectsList: IProject[]= [];
 
   ngOnInit(): void {
     this.getProject();
